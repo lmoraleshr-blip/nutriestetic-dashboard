@@ -9,7 +9,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap');
-
+ 
 :root {
   --teal: #2A7B8C;
   --teal-mid: #3DBDA0;
@@ -33,11 +33,11 @@
   --shadow-lg: 0 8px 32px rgba(42,123,140,0.13);
   --r: 12px; --r-sm: 8px;
 }
-
+ 
 * { margin:0; padding:0; box-sizing:border-box; }
-
+ 
 body { font-family:'DM Sans',sans-serif; background:var(--bg); color:var(--text-primary); font-size:14px; line-height:1.6; min-height:100vh; }
-
+ 
 /* LOGIN */
 #login-screen { min-height:100vh; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg,#1d5a67 0%,#2A7B8C 50%,#3DBDA0 100%); position:relative; overflow:hidden; }
 #login-screen::before { content:''; position:absolute; width:600px; height:600px; border-radius:50%; background:rgba(255,255,255,0.04); top:-200px; right:-200px; }
@@ -62,10 +62,10 @@ body { font-family:'DM Sans',sans-serif; background:var(--bg); color:var(--text-
 .btn-google { width:100%; padding:12px; border-radius:var(--r-sm); border:2px solid var(--border-mid); background:#fff; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:500; color:var(--text-primary); cursor:pointer; display:flex; align-items:center; justify-content:center; gap:10px; transition:all 0.15s; margin-top:6px; }
 .btn-google:hover { border-color:var(--teal); background:var(--teal-pale); }
 .google-icon { width:18px; height:18px; flex-shrink:0; }
-
+ 
 /* APP */
 #app { display:none; }
-
+ 
 /* SIDEBAR */
 .sidebar { position:fixed; left:0; top:0; bottom:0; width:230px; background:var(--teal); display:flex; flex-direction:column; z-index:100; }
 .sidebar-logo { padding:22px 20px 18px; border-bottom:1px solid rgba(255,255,255,0.1); }
@@ -89,7 +89,7 @@ body { font-family:'DM Sans',sans-serif; background:var(--bg); color:var(--text-
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
 .btn-logout { width:100%; padding:8px 12px; border:none; background:rgba(255,255,255,0.08); border-radius:var(--r-sm); color:rgba(255,255,255,0.6); font-family:'DM Sans',sans-serif; font-size:12px; cursor:pointer; transition:all 0.15s; text-align:left; }
 .btn-logout:hover { background:rgba(255,255,255,0.14); color:#fff; }
-
+ 
 /* MAIN */
 .main { margin-left:230px; min-height:100vh; }
 .topbar { position:sticky; top:0; background:rgba(244,249,248,0.95); backdrop-filter:blur(10px); border-bottom:1px solid var(--border); padding:13px 26px; display:flex; align-items:center; justify-content:space-between; z-index:90; }
@@ -97,15 +97,15 @@ body { font-family:'DM Sans',sans-serif; background:var(--bg); color:var(--text-
 .topbar-right { display:flex; align-items:center; gap:14px; }
 .topbar-date { font-size:11px; color:var(--text-muted); font-family:'DM Mono',monospace; }
 .content { padding:22px 26px; }
-
+ 
 /* PANELS */
 .panel { display:none; }
 .panel.active { display:block; }
-
+ 
 /* CARDS */
 .card { background:var(--surface); border-radius:var(--r); border:1px solid var(--border); padding:18px 22px; box-shadow:var(--shadow); }
 .card-title { font-size:10.5px; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); margin-bottom:14px; }
-
+ 
 /* METRICS */
 .metrics-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:13px; margin-bottom:20px; }
 .metric-card { background:var(--surface); border-radius:var(--r); border:1px solid var(--border); padding:15px 17px; box-shadow:var(--shadow); }
@@ -116,13 +116,13 @@ body { font-family:'DM Sans',sans-serif; background:var(--bg); color:var(--text-
 .metric-value.success { color:var(--success); }
 .metric-value.warning { color:var(--warning); }
 .metric-sub { font-size:11px; color:var(--text-muted); margin-top:3px; }
-
+ 
 /* LAYOUT */
 .charts-row { display:grid; grid-template-columns:2fr 1fr; gap:16px; margin-bottom:20px; }
 .row { display:flex; gap:16px; margin-bottom:20px; }
 .row > * { flex:1; min-width:0; }
 .chart-wrap { position:relative; width:100%; }
-
+ 
 /* FORMS */
 .form-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(145px,1fr)); gap:13px; margin-bottom:14px; }
 .form-group { display:flex; flex-direction:column; gap:5px; }
@@ -130,7 +130,7 @@ label { font-size:12px; font-weight:500; color:var(--text-secondary); letter-spa
 input,select,textarea { font-family:'DM Sans',sans-serif; font-size:13px; padding:9px 12px; border:1px solid var(--border-mid); border-radius:var(--r-sm); background:var(--surface); color:var(--text-primary); outline:none; transition:border-color 0.15s; width:100%; }
 input:focus,select:focus,textarea:focus { border-color:var(--teal-mid); box-shadow:0 0 0 3px rgba(61,189,160,0.1); }
 textarea { resize:vertical; min-height:60px; }
-
+ 
 .btn { font-family:'DM Sans',sans-serif; font-size:13px; font-weight:500; padding:9px 18px; border-radius:var(--r-sm); border:none; cursor:pointer; transition:all 0.15s; display:inline-flex; align-items:center; gap:6px; }
 .btn-primary { background:var(--teal); color:#fff; }
 .btn-primary:hover { background:#235f6e; }
@@ -140,7 +140,7 @@ textarea { resize:vertical; min-height:60px; }
 .btn-success { background:var(--success-bg); color:var(--success); border:1px solid rgba(26,122,66,0.2); }
 .btn-sm { padding:5px 11px; font-size:11px; }
 .btn-xs { padding:3px 8px; font-size:11px; }
-
+ 
 /* TABLES */
 .table-wrap { overflow-x:auto; }
 table { width:100%; border-collapse:collapse; font-size:13px; }
@@ -150,7 +150,7 @@ tbody tr:last-child td { border-bottom:none; }
 tbody tr:hover td { background:var(--teal-pale); }
 td.mono { font-family:'DM Mono',monospace; font-size:12px; }
 td.bold { font-weight:600; color:var(--text-primary); }
-
+ 
 .badge { display:inline-flex; align-items:center; padding:3px 9px; border-radius:20px; font-size:11px; font-weight:500; }
 .badge-cash { background:var(--success-bg); color:var(--success); }
 .badge-card { background:var(--teal-light); color:var(--teal); }
@@ -159,25 +159,25 @@ td.bold { font-weight:600; color:var(--text-primary); }
 .badge-ok { background:var(--success-bg); color:var(--success); }
 .badge-pending { background:var(--warning-bg); color:var(--warning); }
 .badge-diff { background:var(--danger-bg); color:var(--danger); }
-
+ 
 /* PERIOD TABS */
 .period-tabs { display:flex; gap:3px; background:var(--surface-2); padding:4px; border-radius:var(--r-sm); border:1px solid var(--border); width:fit-content; margin-bottom:16px; }
 .period-tab { font-size:12px; font-weight:500; padding:5px 12px; border-radius:6px; border:none; background:none; color:var(--text-muted); cursor:pointer; transition:all 0.15s; }
 .period-tab.active { background:var(--teal); color:#fff; box-shadow:0 2px 6px rgba(42,123,140,0.22); }
-
+ 
 /* SECTION HEADER */
 .section-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; }
 .section-title { font-size:14px; font-weight:600; color:var(--text-primary); }
-
+ 
 /* PROGRESS */
 .progress-bar { height:5px; background:var(--border); border-radius:10px; overflow:hidden; margin-top:6px; }
 .progress-fill { height:100%; border-radius:10px; background:var(--teal-mid); transition:width 0.5s ease; }
 .progress-fill.danger { background:var(--danger); }
 .progress-fill.warning { background:var(--warning); }
-
+ 
 /* APR PILL */
 .apr-pill { display:inline-flex; align-items:center; gap:4px; padding:2px 8px; border-radius:20px; font-size:10px; font-weight:600; font-family:'DM Mono',monospace; }
-
+ 
 /* ANALYSIS */
 .analysis-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:16px; }
 .analysis-card { background:var(--surface); border-radius:var(--r); border:1px solid var(--border); padding:16px 20px; box-shadow:var(--shadow); }
@@ -186,42 +186,42 @@ td.bold { font-weight:600; color:var(--text-primary); }
 .analysis-item { display:flex; align-items:flex-start; gap:10px; padding:7px 0; border-bottom:1px solid var(--border); font-size:12px; color:var(--text-secondary); line-height:1.5; }
 .analysis-item:last-child { border-bottom:none; }
 .analysis-num { width:18px; height:18px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:600; flex-shrink:0; margin-top:1px; }
-
+ 
 /* ── PATIENT FORM SPECIFIC ── */
 .patient-form-wrap { max-width:720px; }
-
+ 
 .services-section { border:1px solid var(--border); border-radius:var(--r); overflow:hidden; margin-bottom:16px; }
 .services-header { background:var(--surface-2); padding:10px 16px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--border); }
 .services-header-title { font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.8px; color:var(--text-muted); }
-
+ 
 .service-row { display:grid; grid-template-columns:1fr 140px 28px; gap:10px; align-items:center; padding:10px 16px; border-bottom:1px solid var(--border); background:var(--surface); }
 .service-row:last-child { border-bottom:none; }
 .service-row select, .service-row input { margin:0; }
-
+ 
 .payment-split { border:1px solid var(--border); border-radius:var(--r); overflow:hidden; margin-bottom:16px; }
 .payment-split-header { background:var(--surface-2); padding:10px 16px; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.8px; color:var(--text-muted); border-bottom:1px solid var(--border); }
 .payment-method-row { display:grid; grid-template-columns:1fr 140px; gap:10px; padding:10px 16px; border-bottom:1px solid var(--border); background:var(--surface); align-items:center; }
 .payment-method-row:last-child { border-bottom:none; }
 .add-payment-btn { padding:10px 16px; background:var(--surface); border:none; cursor:pointer; font-family:'DM Sans',sans-serif; font-size:12px; color:var(--teal); font-weight:500; display:flex; align-items:center; gap:6px; width:100%; transition:background 0.15s; }
 .add-payment-btn:hover { background:var(--teal-pale); }
-
+ 
 .total-bar { background:var(--teal-light); border-radius:var(--r-sm); padding:14px 18px; display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; }
 .total-bar-label { font-size:13px; font-weight:600; color:var(--teal); }
 .total-bar-amount { font-size:20px; font-weight:700; color:var(--teal); font-family:'DM Mono',monospace; }
 .total-bar-diff { font-size:12px; font-weight:500; padding:3px 10px; border-radius:20px; }
 .total-bar-diff.ok { background:var(--success-bg); color:var(--success); }
 .total-bar-diff.over { background:var(--danger-bg); color:var(--danger); }
-
+ 
 /* ── CUADRE DIARIO ── */
 .cuadre-section { max-width:760px; }
-
+ 
 .cuadre-summary { border:1px solid var(--border); border-radius:var(--r); overflow:hidden; margin-bottom:20px; }
 .cuadre-summary-header { background:linear-gradient(135deg,var(--teal) 0%,#1d6b7a 100%); padding:16px 20px; color:#fff; }
 .cuadre-summary-title { font-size:14px; font-weight:600; }
 .cuadre-summary-date { font-size:11px; opacity:0.7; margin-top:2px; }
-
+ 
 .cuadre-patient-list { background:var(--surface); }
-
+ 
 .cuadre-validation { border:1px solid var(--border); border-radius:var(--r); overflow:hidden; margin-bottom:20px; background:var(--surface); }
 .cuadre-validation-header { background:var(--surface-2); padding:12px 18px; font-size:12px; font-weight:600; color:var(--text-primary); border-bottom:1px solid var(--border); letter-spacing:0.3px; }
 .validation-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:0; }
@@ -237,7 +237,7 @@ td.bold { font-weight:600; color:var(--text-primary); }
 .validation-diff.ok { background:var(--success-bg); color:var(--success); }
 .validation-diff.over { background:var(--danger-bg); color:var(--danger); }
 .validation-diff.under { background:var(--warning-bg); color:var(--warning); }
-
+ 
 .cuadre-result { border-radius:var(--r); padding:18px 20px; margin-bottom:20px; }
 .cuadre-result.balanced { background:var(--success-bg); border:1px solid rgba(26,122,66,0.2); }
 .cuadre-result.unbalanced { background:var(--danger-bg); border:1px solid rgba(192,57,43,0.2); }
@@ -245,33 +245,33 @@ td.bold { font-weight:600; color:var(--text-primary); }
 .cuadre-result.balanced .cuadre-result-title { color:var(--success); }
 .cuadre-result.unbalanced .cuadre-result-title { color:var(--danger); }
 .cuadre-result-desc { font-size:13px; opacity:0.85; }
-
+ 
 /* MODAL */
 .modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.38); z-index:200; align-items:center; justify-content:center; }
 .modal-overlay.open { display:flex; }
 .modal { background:var(--surface); border-radius:var(--r); padding:24px; width:480px; max-width:95vw; box-shadow:var(--shadow-lg); max-height:90vh; overflow-y:auto; }
 .modal-title { font-size:15px; font-weight:600; color:var(--text-primary); margin-bottom:16px; }
 .modal-actions { display:flex; gap:10px; justify-content:flex-end; margin-top:16px; }
-
+ 
 /* TOAST */
 .toast { position:fixed; bottom:20px; right:20px; background:var(--teal); color:#fff; padding:10px 16px; border-radius:var(--r-sm); font-size:13px; font-weight:500; opacity:0; transform:translateY(10px); transition:all 0.3s; z-index:300; box-shadow:var(--shadow-lg); }
 .toast.show { opacity:1; transform:translateY(0); }
-
+ 
 /* LOADING */
 .loading-overlay { position:fixed; inset:0; background:rgba(244,249,248,0.92); display:flex; flex-direction:column; align-items:center; justify-content:center; z-index:400; gap:14px; }
 .loading-spinner { width:34px; height:34px; border:3px solid var(--border-mid); border-top-color:var(--teal); border-radius:50%; animation:spin 0.7s linear infinite; }
 @keyframes spin { to { transform:rotate(360deg); } }
 .loading-text { font-size:13px; color:var(--text-muted); }
-
+ 
 ::-webkit-scrollbar { width:5px; height:5px; }
 ::-webkit-scrollbar-track { background:transparent; }
 ::-webkit-scrollbar-thumb { background:var(--border-mid); border-radius:10px; }
-
+ 
 @media (max-width:860px) { .sidebar{display:none} .main{margin-left:0} .charts-row{grid-template-columns:1fr} .row{flex-direction:column} }
 </style>
 </head>
 <body>
-
+ 
 <!-- LOGIN -->
 <div id="login-screen">
   <div class="login-box">
@@ -308,7 +308,7 @@ td.bold { font-weight:600; color:var(--text-primary); }
     </button>
   </div>
 </div>
-
+ 
 <!-- APP -->
 <div id="app">
   <aside class="sidebar" id="sidebar">
@@ -381,7 +381,7 @@ td.bold { font-weight:600; color:var(--text-primary); }
       <button class="btn-logout" onclick="logout()">Cerrar sesión</button>
     </div>
   </aside>
-
+ 
   <main class="main">
     <div class="topbar">
       <div class="page-title" id="page-title">Dashboard</div>
@@ -390,9 +390,9 @@ td.bold { font-weight:600; color:var(--text-primary); }
         <button class="btn btn-secondary btn-sm" onclick="syncAll()" id="btn-sync" style="display:none">↻ Sync</button>
       </div>
     </div>
-
+ 
     <div class="content">
-
+ 
       <!-- DASHBOARD -->
       <div class="panel active" id="panel-dashboard">
         <div class="period-tabs">
@@ -425,7 +425,7 @@ td.bold { font-weight:600; color:var(--text-primary); }
           </div>
         </div>
       </div>
-
+ 
       <!-- REGISTRAR PACIENTE -->
       <div class="panel" id="panel-paciente">
         <div class="patient-form-wrap">
@@ -446,7 +446,7 @@ td.bold { font-weight:600; color:var(--text-primary); }
               </div>
             </div>
           </div>
-
+ 
           <!-- SERVICES -->
           <div class="services-section">
             <div class="services-header">
@@ -457,7 +457,7 @@ td.bold { font-weight:600; color:var(--text-primary); }
               <!-- rows inserted here -->
             </div>
           </div>
-
+ 
           <!-- TOTAL -->
           <div class="total-bar">
             <div>
@@ -468,7 +468,7 @@ td.bold { font-weight:600; color:var(--text-primary); }
               <div class="total-bar-amount" id="services-total">$0.00</div>
             </div>
           </div>
-
+ 
           <!-- PAYMENT SPLIT -->
           <div class="payment-split">
             <div class="payment-split-header">Método(s) de pago — máximo 2</div>
@@ -478,17 +478,17 @@ td.bold { font-weight:600; color:var(--text-primary); }
               Agregar segundo método de pago
             </button>
           </div>
-
+ 
           <!-- PAYMENT DIFF -->
           <div id="payment-diff-bar" style="display:none;margin-bottom:16px;padding:10px 16px;border-radius:var(--r-sm);font-size:13px;font-weight:500"></div>
-
+ 
           <div style="display:flex;gap:10px">
             <button class="btn btn-primary" onclick="guardarPaciente()">Guardar registro</button>
             <button class="btn btn-secondary" onclick="limpiarFormPaciente()">Limpiar</button>
           </div>
         </div>
       </div>
-
+ 
       <!-- CUADRE DIARIO -->
       <div class="panel" id="panel-cuadre">
         <div class="cuadre-section">
@@ -496,7 +496,7 @@ td.bold { font-weight:600; color:var(--text-primary); }
             <div class="section-title">Cuadre diario</div>
             <input type="date" id="cuadre-fecha" onchange="renderCuadre()">
           </div>
-
+ 
           <!-- Patient summary -->
           <div class="cuadre-summary">
             <div class="cuadre-summary-header">
@@ -513,13 +513,13 @@ td.bold { font-weight:600; color:var(--text-primary); }
               <div id="cuadre-patient-empty" style="text-align:center;padding:30px;color:var(--text-muted);display:none">No hay pacientes registrados para este día.</div>
             </div>
           </div>
-
+ 
           <!-- System totals -->
           <div class="card" style="margin-bottom:16px">
             <div class="card-title">Totales del sistema</div>
             <div id="system-totals-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px"></div>
           </div>
-
+ 
           <!-- Validation -->
           <div class="cuadre-validation">
             <div class="cuadre-validation-header">Ingresa los totales físicos para validar el cuadre</div>
@@ -563,13 +563,13 @@ td.bold { font-weight:600; color:var(--text-primary); }
               </div>
             </div>
           </div>
-
+ 
           <div id="cuadre-result" style="display:none"></div>
-
+ 
           <button class="btn btn-primary" onclick="cerrarCuadre()" id="btn-cerrar-cuadre">Cerrar y guardar cuadre</button>
         </div>
       </div>
-
+ 
       <!-- HISTORIAL -->
       <div class="panel" id="panel-historial">
         <div class="section-header">
@@ -587,7 +587,7 @@ td.bold { font-weight:600; color:var(--text-primary); }
           <div id="hist-content"></div>
         </div>
       </div>
-
+ 
       <!-- DEUDAS -->
       <div class="panel" id="panel-deudas">
         <div class="metrics-grid" id="deuda-metrics" style="margin-bottom:20px"></div>
@@ -620,7 +620,7 @@ td.bold { font-weight:600; color:var(--text-primary); }
           <div id="pagos-empty" style="text-align:center;padding:24px;color:var(--text-muted);display:none">Sin pagos.</div>
         </div>
       </div>
-
+ 
       <!-- GASTOS -->
       <div class="panel" id="panel-gastos">
         <div class="section-header">
@@ -643,7 +643,7 @@ td.bold { font-weight:600; color:var(--text-primary); }
           </div>
         </div>
       </div>
-
+ 
       <!-- ANÁLISIS -->
       <div class="panel" id="panel-analisis">
         <div style="margin-bottom:20px">
@@ -657,11 +657,11 @@ td.bold { font-weight:600; color:var(--text-primary); }
           <div id="plan-accion" style="font-size:13px;line-height:1.85;opacity:0.92"></div>
         </div>
       </div>
-
+ 
     </div>
   </main>
 </div>
-
+ 
 <!-- MODALS -->
 <div class="modal-overlay" id="modal-tarjeta">
   <div class="modal">
@@ -681,7 +681,7 @@ td.bold { font-weight:600; color:var(--text-primary); }
     </div>
   </div>
 </div>
-
+ 
 <div class="modal-overlay" id="modal-pago">
   <div class="modal">
     <div class="modal-title">Registrar pago</div>
@@ -700,7 +700,7 @@ td.bold { font-weight:600; color:var(--text-primary); }
     </div>
   </div>
 </div>
-
+ 
 <div class="modal-overlay" id="modal-gasto">
   <div class="modal">
     <div class="modal-title">Registrar gasto</div>
@@ -718,13 +718,13 @@ td.bold { font-weight:600; color:var(--text-primary); }
     </div>
   </div>
 </div>
-
+ 
 <div class="toast" id="toast"></div>
 <div class="loading-overlay" id="loading" style="display:none">
   <div class="loading-spinner"></div>
   <div class="loading-text" id="loading-text">Cargando...</div>
 </div>
-
+ 
 <script>
 // ═══════════════════════════════════
 // CONFIG — change PINs here
@@ -734,7 +734,7 @@ const SHEET_ID   = '1xDreiS4QsUk-WACasOjhIHFfgljQGe51wv9n82-4um4';
 const SCOPES     = 'https://www.googleapis.com/auth/spreadsheets';
 const PIN_ADMIN  = '1234';   // ← change this
 const PIN_SEC    = '5678';   // ← change this
-
+ 
 const SERVICIOS = [
   'Anestesia tópica / local',
   'Body Sculp (Rohrer BodySculp)',
@@ -757,11 +757,11 @@ const SERVICIOS = [
   'Ultherapy — HIFU (Merz Aesthetics)',
   'UltraLight — Terapia LED (Rohrer UltraLight)'
 ];
-
+ 
 const METODOS_PAGO = ['Efectivo','Tarjeta de Crédito','ATH Móvil'];
-
+ 
 const SHEETS = { pacientes:'Pacientes', cuadres:'Cuadres', tarjetas:'Tarjetas', pagos:'Pagos', gastos:'Gastos' };
-
+ 
 // ═══════════════════════════════════
 // STATE
 // ═══════════════════════════════════
@@ -770,16 +770,16 @@ let currentPeriod = 'dia';
 let tokenClient = null;
 let accessToken = null;
 let chartInst = {};
-
+ 
 let pacientes = [];
 let cuadresLog = [];
 let tarjetas = [];
 let pagos = [];
 let gastos = [];
-
+ 
 let serviceRowCount = 0;
 let paymentRowCount = 0;
-
+ 
 // ═══════════════════════════════════
 // LOGIN
 // ═══════════════════════════════════
@@ -794,14 +794,14 @@ function selectRole(role) {
   ['p0','p1','p2','p3'].forEach(id => document.getElementById(id).value = '');
   document.getElementById('p0').focus();
 }
-
+ 
 function pinInput(idx) {
   const val = document.getElementById('p'+idx).value;
   if(val && idx < 3) document.getElementById('p'+(idx+1)).focus();
   const pin = ['p0','p1','p2','p3'].map(id => document.getElementById(id).value).join('');
   if(pin.length === 4) verifyPin(pin);
 }
-
+ 
 function verifyPin(pin) {
   const expected = currentRole === 'admin' ? PIN_ADMIN : PIN_SEC;
   if(pin === expected) {
@@ -814,7 +814,7 @@ function verifyPin(pin) {
     document.getElementById('p0').focus();
   }
 }
-
+ 
 // ═══════════════════════════════════
 // GOOGLE AUTH
 // ═══════════════════════════════════
@@ -823,7 +823,7 @@ window.addEventListener('load', () => {
     await gapi.client.init({ discoveryDocs:['https://sheets.googleapis.com/$discovery/rest?version=v4'] });
   });
 });
-
+ 
 function googleSignIn() {
   if(!tokenClient) {
     tokenClient = google.accounts.oauth2.initTokenClient({
@@ -837,16 +837,16 @@ function googleSignIn() {
   }
   tokenClient.requestAccessToken({ prompt:'consent' });
 }
-
+ 
 async function initApp() {
   showLoading('Cargando datos...');
   await ensureSheets();
   await loadAllData();
   hideLoading();
-
+ 
   document.getElementById('login-screen').style.display = 'none';
   document.getElementById('app').style.display = 'block';
-
+ 
   if(currentRole === 'sec') {
     document.getElementById('admin-nav').style.display = 'none';
     document.getElementById('sec-nav').style.display = 'block';
@@ -863,7 +863,7 @@ async function initApp() {
     document.getElementById('user-avatar').textContent = 'A';
     renderDashboard();
   }
-
+ 
   // Init forms
   document.getElementById('p-fecha').value = today();
   document.getElementById('cuadre-fecha').value = today();
@@ -872,7 +872,7 @@ async function initApp() {
   initPatientForm();
   updateDate();
 }
-
+ 
 function logout() {
   if(accessToken) google.accounts.oauth2.revoke(accessToken);
   accessToken = null; currentRole = null;
@@ -884,7 +884,7 @@ function logout() {
   document.getElementById('btn-google').style.display = 'none';
   ['p0','p1','p2','p3'].forEach(id => document.getElementById(id).value = '');
 }
-
+ 
 // ═══════════════════════════════════
 // SHEETS API
 // ═══════════════════════════════════
@@ -897,7 +897,7 @@ async function sheetsRequest(method, path, body) {
   });
   return res.json();
 }
-
+ 
 async function ensureSheets() {
   const info = await sheetsRequest('GET', '');
   const existing = (info.sheets||[]).map(s => s.properties.title);
@@ -916,7 +916,7 @@ async function ensureSheets() {
     }
   }
 }
-
+ 
 async function loadAllData() {
   if(currentRole === 'sec') {
     pacientes = await loadSheet(SHEETS.pacientes, rowToPaciente);
@@ -930,7 +930,7 @@ async function loadAllData() {
     ]);
   }
 }
-
+ 
 function rowToPaciente(r) {
   return {
     fecha: r[0]||'', nombre: r[1]||'', record: r[2]||'',
@@ -941,28 +941,28 @@ function rowToPaciente(r) {
     total: +r[7]||0
   };
 }
-
+ 
 function rowToCuadre(r) {
   return { fecha:r[0], count:+r[1]||0, cash:+r[2]||0, card:+r[3]||0, ath:+r[4]||0, total:+r[5]||0, v_cash:+r[6]||0, v_card:+r[7]||0, v_ath:+r[8]||0, diff_cash:+r[9]||0, diff_card:+r[10]||0, diff_ath:+r[11]||0, status:r[12]||'' };
 }
-
+ 
 async function loadSheet(name, mapper) {
   const res = await sheetsRequest('GET', `/values/${encodeURIComponent(name+'!A2:Z')}?majorDimension=ROWS`);
   return ((res.values||[]).filter(r => r[0])).map(mapper);
 }
-
+ 
 async function appendRow(sheet, values) {
   setSyncing();
   await sheetsRequest('POST', `/values/${encodeURIComponent(sheet+'!A1')}:append?valueInputOption=RAW&insertDataOption=INSERT_ROWS`, { values:[values] });
   setSynced();
 }
-
+ 
 async function rewriteSheet(sheet, header, rows) {
   setSyncing();
   await sheetsRequest('PUT', `/values/${encodeURIComponent(sheet+'!A1')}?valueInputOption=RAW`, { values:[header,...rows] });
   setSynced();
 }
-
+ 
 function setSyncing() {
   const d=document.getElementById('sync-dot'), t=document.getElementById('sync-text');
   if(d){d.className='sync-dot syncing';t.textContent='Guardando...';}
@@ -971,7 +971,7 @@ function setSynced() {
   const d=document.getElementById('sync-dot'), t=document.getElementById('sync-text');
   if(d){d.className='sync-dot';t.textContent='Sincronizado';}
 }
-
+ 
 async function syncAll() {
   showLoading('Actualizando...');
   await loadAllData();
@@ -979,14 +979,14 @@ async function syncAll() {
   renderDashboard();
   showToast('Datos actualizados');
 }
-
+ 
 // ═══════════════════════════════════
 // HELPERS
 // ═══════════════════════════════════
 const fmt   = n => '$'+Number(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
 const pct   = (a,b) => b===0?'0%':Math.round(a/b*100)+'%';
 const today = () => new Date().toISOString().slice(0,10);
-
+ 
 function showToast(msg) {
   const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show');
   setTimeout(()=>t.classList.remove('show'),2800);
@@ -1002,7 +1002,7 @@ function serviceOptions(selected='') {
 function paymentOptions(selected='') {
   return `<option value="">— Método —</option>` + METODOS_PAGO.map(m => `<option value="${m}" ${m===selected?'selected':''}>${m}</option>`).join('');
 }
-
+ 
 function getDateRange(period) {
   const n=new Date(),y=n.getFullYear(),m=n.getMonth(),d=n.getDate();
   if(period==='dia')       return {start:new Date(y,m,d),end:new Date(y,m,d,23,59)};
@@ -1011,14 +1011,14 @@ function getDateRange(period) {
   if(period==='trimestre') {const q=Math.floor(m/3);return {start:new Date(y,q*3,1),end:new Date(y,q*3+3,0,23,59)};}
   if(period==='anual')     return {start:new Date(y,0,1),end:new Date(y,11,31,23,59)};
 }
-
+ 
 function filterByPeriod(arr,period,df='fecha') {
   const {start,end}=getDateRange(period);
   return arr.filter(x=>{const d=new Date(x[df]+'T00:00:00');return d>=start&&d<=end;});
 }
-
+ 
 function destroyChart(id) { if(chartInst[id]){chartInst[id].destroy();delete chartInst[id];} }
-
+ 
 // ═══════════════════════════════════
 // NAVIGATION
 // ═══════════════════════════════════
@@ -1036,19 +1036,19 @@ function showPanel(name, btn) {
   if(name==='gastos')    renderGastos();
   if(name==='analisis')  renderAnalisis();
 }
-
+ 
 function showPanelDirect(name) {
   document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
   document.getElementById('panel-'+name).classList.add('active');
 }
-
+ 
 function setPeriod(p,btn) {
   currentPeriod=p;
   document.querySelectorAll('.period-tab').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   renderDashboard();
 }
-
+ 
 // ═══════════════════════════════════
 // PATIENT FORM
 // ═══════════════════════════════════
@@ -1059,7 +1059,7 @@ function initPatientForm() {
   addServiceRow();
   addPaymentRow();
 }
-
+ 
 function addServiceRow() {
   const id = serviceRowCount++;
   const row = document.createElement('div');
@@ -1072,14 +1072,14 @@ function addServiceRow() {
   `;
   document.getElementById('services-body').appendChild(row);
 }
-
+ 
 function removeServiceRow(id) {
   const rows = document.querySelectorAll('#services-body .service-row');
   if(rows.length<=1){showToast('Debe haber al menos un servicio');return;}
   document.getElementById('srow-'+id)?.remove();
   calcTotal();
 }
-
+ 
 function addPaymentRow() {
   const existing = document.querySelectorAll('#payment-body .payment-method-row').length;
   if(existing>=2){showToast('Máximo 2 métodos de pago');return;}
@@ -1096,7 +1096,7 @@ function addPaymentRow() {
   if(document.querySelectorAll('#payment-body .payment-method-row').length>=2) btn.style.display='none';
   calcPaymentDiff();
 }
-
+ 
 function calcTotal() {
   const rows=document.querySelectorAll('#services-body .service-row');
   let total=0;
@@ -1107,7 +1107,7 @@ function calcTotal() {
   document.getElementById('services-total').textContent=fmt(total);
   calcPaymentDiff();
 }
-
+ 
 function calcPaymentDiff() {
   const serviceTotal=parseFloat(document.getElementById('services-total').textContent.replace('$','').replace(',',''))||0;
   const rows=document.querySelectorAll('#payment-body .payment-method-row');
@@ -1121,13 +1121,13 @@ function calcPaymentDiff() {
   else if(diff>0){bar.style.background='var(--warning-bg)';bar.style.color='var(--warning)';bar.textContent=`Los pagos superan el total por ${fmt(diff)}. Verifica los montos.`;}
   else{bar.style.background='var(--danger-bg)';bar.style.color='var(--danger)';bar.textContent=`Faltan ${fmt(Math.abs(diff))} para completar el total de servicios.`;}
 }
-
+ 
 async function guardarPaciente() {
   const nombre=document.getElementById('p-nombre').value.trim();
   const record=document.getElementById('p-record').value.trim();
   const fecha=document.getElementById('p-fecha').value;
   if(!nombre||!fecha){showToast('Nombre y fecha son requeridos');return;}
-
+ 
   const sRows=document.querySelectorAll('#services-body .service-row');
   const servicios=[],montos=[];
   let totalServ=0;
@@ -1143,7 +1143,7 @@ async function guardarPaciente() {
   });
   if(!valid){showToast('Selecciona un servicio en cada fila');return;}
   if(totalServ===0){showToast('Ingresa al menos un monto de servicio');return;}
-
+ 
   const pRows=document.querySelectorAll('#payment-body .payment-method-row');
   const metodos=[],montosPago=[];
   pRows.forEach(r=>{
@@ -1153,7 +1153,7 @@ async function guardarPaciente() {
     if(met&&monto>0){metodos.push(met);montosPago.push(monto);}
   });
   if(!metodos.length){showToast('Ingresa al menos un método de pago');return;}
-
+ 
   const paciente={fecha,nombre,record,servicios,montos,metodos_pago:metodos,montos_pago:montosPago,total:totalServ};
   showLoading('Guardando...');
   pacientes.push(paciente);
@@ -1169,7 +1169,7 @@ async function guardarPaciente() {
   showToast(`✓ ${nombre} registrado correctamente`);
   limpiarFormPaciente();
 }
-
+ 
 function limpiarFormPaciente() {
   document.getElementById('p-nombre').value='';
   document.getElementById('p-record').value='';
@@ -1179,7 +1179,7 @@ function limpiarFormPaciente() {
   document.getElementById('payment-diff-bar').style.display='none';
   document.getElementById('add-payment-btn').style.display='flex';
 }
-
+ 
 // ═══════════════════════════════════
 // CUADRE DIARIO
 // ═══════════════════════════════════
@@ -1187,7 +1187,7 @@ function renderCuadre() {
   const fecha=document.getElementById('cuadre-fecha').value||today();
   document.getElementById('cuadre-summary-date').textContent=new Date(fecha+'T00:00:00').toLocaleDateString('es-PR',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
   const dayPacientes=pacientes.filter(p=>p.fecha===fecha);
-
+ 
   // Patient table
   const tbody=document.getElementById('cuadre-patient-tbody');
   const empty=document.getElementById('cuadre-patient-empty');
@@ -1206,7 +1206,7 @@ function renderCuadre() {
       </tr>`;
     }).join('');
   }
-
+ 
   // System totals
   let sysCash=0,sysCard=0,sysAth=0;
   dayPacientes.forEach(p=>{
@@ -1218,7 +1218,7 @@ function renderCuadre() {
     });
   });
   const sysTotal=sysCash+sysCard+sysAth;
-
+ 
   document.getElementById('system-totals-grid').innerHTML=`
     <div class="metric-card"><div class="metric-label">Pacientes</div><div class="metric-value">${dayPacientes.length}</div></div>
     <div class="metric-card"><div class="metric-label">Efectivo</div><div class="metric-value success">${fmt(sysCash)}</div></div>
@@ -1226,18 +1226,18 @@ function renderCuadre() {
     <div class="metric-card"><div class="metric-label">ATH Móvil</div><div class="metric-value" style="color:#167a60">${fmt(sysAth)}</div></div>
     <div class="metric-card"><div class="metric-label">Total general</div><div class="metric-value teal">${fmt(sysTotal)}</div></div>
   `;
-
+ 
   document.getElementById('v-sys-cash').textContent=fmt(sysCash);
   document.getElementById('v-sys-card').textContent=fmt(sysCard);
   document.getElementById('v-sys-ath').textContent=fmt(sysAth);
   document.getElementById('v-sys-total').textContent=fmt(sysTotal);
-
+ 
   // Store for validation
   document.getElementById('v-cash').dataset.sys=sysCash;
   document.getElementById('v-card').dataset.sys=sysCard;
   document.getElementById('v-ath').dataset.sys=sysAth;
 }
-
+ 
 function calcDiff() {
   const vCash=+document.getElementById('v-cash').value||0;
   const vCard=+document.getElementById('v-card').value||0;
@@ -1245,7 +1245,7 @@ function calcDiff() {
   const sCash=+document.getElementById('v-cash').dataset.sys||0;
   const sCard=+document.getElementById('v-card').dataset.sys||0;
   const sAth=+document.getElementById('v-ath').dataset.sys||0;
-
+ 
   function showDiff(elId,physical,system) {
     const el=document.getElementById(elId);
     if(!physical&&physical!==0){el.style.display='none';return;}
@@ -1255,16 +1255,16 @@ function calcDiff() {
     else if(d>0){el.className='validation-diff over';el.textContent=`+${fmt(d)} de más`;}
     else{el.className='validation-diff under';el.textContent=`${fmt(d)} faltante`;}
   }
-
+ 
   showDiff('v-diff-cash',vCash,sCash);
   showDiff('v-diff-card',vCard,sCard);
   showDiff('v-diff-ath',vAth,sAth);
-
+ 
   const physTotal=vCash+vCard+vAth;
   const sysTotal=sCash+sCard+sAth;
   document.getElementById('v-physical-total').textContent=fmt(physTotal);
   showDiff('v-diff-total',physTotal,sysTotal);
-
+ 
   // Result banner
   const result=document.getElementById('cuadre-result');
   if(vCash||vCard||vAth) {
@@ -1279,7 +1279,7 @@ function calcDiff() {
     }
   } else { result.style.display='none'; }
 }
-
+ 
 async function cerrarCuadre() {
   const fecha=document.getElementById('cuadre-fecha').value||today();
   const vCash=+document.getElementById('v-cash').value||0;
@@ -1288,17 +1288,17 @@ async function cerrarCuadre() {
   const sCash=+document.getElementById('v-cash').dataset.sys||0;
   const sCard=+document.getElementById('v-card').dataset.sys||0;
   const sAth=+document.getElementById('v-ath').dataset.sys||0;
-
+ 
   if(!vCash&&!vCard&&!vAth){showToast('Ingresa los montos físicos antes de cerrar');return;}
-
+ 
   const dayPacientes=pacientes.filter(p=>p.fecha===fecha);
   const sysTotal=sCash+sCard+sAth;
   const physTotal=vCash+vCard+vAth;
   const diff=physTotal-sysTotal;
   const status=Math.abs(diff)<0.01?'BALANCEADO':'DIFERENCIA: '+fmt(diff);
-
+ 
   const cuadreRow=[fecha,dayPacientes.length,sCash,sCard,sAth,sysTotal,vCash,vCard,vAth,vCash-sCash,vCard-sCard,vAth-sAth,status];
-
+ 
   showLoading('Guardando cuadre...');
   const existing=cuadresLog.findIndex(c=>c.fecha===fecha);
   if(existing>=0) {
@@ -1312,7 +1312,7 @@ async function cerrarCuadre() {
   hideLoading();
   showToast(`Cuadre guardado — ${status}`);
 }
-
+ 
 // ═══════════════════════════════════
 // DASHBOARD
 // ═══════════════════════════════════
@@ -1321,7 +1321,7 @@ function renderDashboard() {
   const total=data.reduce((s,x)=>s+x.total,0);
   const pacs=data.length;
   const avg=pacs>0?total/pacs:0;
-
+ 
   let cash=0,card=0,ath=0;
   data.forEach(p=>{
     p.metodos_pago.forEach((m,i)=>{
@@ -1331,7 +1331,7 @@ function renderDashboard() {
       else if(m==='ATH Móvil') ath+=amt;
     });
   });
-
+ 
   document.getElementById('m-grid').innerHTML=`
     <div class="metric-card"><div class="metric-label">Ingresos</div><div class="metric-value teal">${fmt(total)}</div><div class="metric-sub">${pacs} pacientes</div></div>
     <div class="metric-card"><div class="metric-label">Ticket promedio</div><div class="metric-value teal">${fmt(avg)}</div><div class="metric-sub">Por paciente</div></div>
@@ -1339,13 +1339,13 @@ function renderDashboard() {
     <div class="metric-card"><div class="metric-label">Tarjeta</div><div class="metric-value teal">${fmt(card)}</div><div class="metric-sub">${pct(card,total)}</div></div>
     <div class="metric-card"><div class="metric-label">ATH Móvil</div><div class="metric-value" style="color:#167a60">${fmt(ath)}</div><div class="metric-sub">${pct(ath,total)}</div></div>
   `;
-
+ 
   renderChartIngresos(data);
   renderChartPagos(cash,card,ath);
   renderChartServicios(data);
   renderResumen(total);
 }
-
+ 
 function aggregateByDate(data) {
   if(currentPeriod==='trimestre'||currentPeriod==='anual') {
     const m={};
@@ -1358,13 +1358,13 @@ function aggregateByDate(data) {
   const keys=Object.keys(m).sort();
   return {labels:keys.map(k=>k.slice(5)),values:keys.map(k=>m[k])};
 }
-
+ 
 function renderChartIngresos(data) {
   destroyChart('chartIngresos');
   const {labels,values}=data.length?aggregateByDate(data):{labels:['Sin datos'],values:[0]};
   chartInst['chartIngresos']=new Chart(document.getElementById('chartIngresos'),{type:'bar',data:{labels,datasets:[{label:'Ingresos',data:values,backgroundColor:'rgba(42,123,140,0.72)',borderColor:'#2A7B8C',borderWidth:1.5,borderRadius:6,borderSkipped:false}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false},ticks:{font:{size:10},color:'#8aada8'}},y:{grid:{color:'rgba(42,123,140,0.07)'},ticks:{font:{size:10},color:'#8aada8',callback:v=>'$'+v.toLocaleString()}}}}});
 }
-
+ 
 function renderChartPagos(cash,card,ath) {
   destroyChart('chartPagos');
   const total=cash+card+ath;
@@ -1374,7 +1374,7 @@ function renderChartPagos(cash,card,ath) {
   document.getElementById('legend-pagos').innerHTML=labels.map((l,i)=>`<span style="display:flex;align-items:center;gap:4px"><span style="width:9px;height:9px;border-radius:2px;background:${colors[i]}"></span>${l} ${total>0?pct(values[i],total):'0%'}</span>`).join('');
   chartInst['chartPagos']=new Chart(document.getElementById('chartPagos'),{type:'doughnut',data:{labels,datasets:[{data:total>0?values:[1,1,1],backgroundColor:colors,borderWidth:0,hoverOffset:5}]},options:{responsive:true,maintainAspectRatio:false,cutout:'65%',plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>' '+ctx.label+': '+fmt(ctx.raw)}}}}});
 }
-
+ 
 function renderChartServicios(data) {
   destroyChart('chartServicios');
   const counts={};
@@ -1383,7 +1383,7 @@ function renderChartServicios(data) {
   if(!sorted.length) return;
   chartInst['chartServicios']=new Chart(document.getElementById('chartServicios'),{type:'bar',data:{labels:sorted.map(x=>x[0].split('—')[0].split('(')[0].trim().slice(0,22)),datasets:[{label:'Veces',data:sorted.map(x=>x[1]),backgroundColor:'rgba(61,189,160,0.7)',borderColor:'#3DBDA0',borderWidth:1.5,borderRadius:6,borderSkipped:false}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:'rgba(42,123,140,0.07)'},ticks:{font:{size:10},color:'#8aada8',stepSize:1}},y:{grid:{display:false},ticks:{font:{size:10},color:'#8aada8'}}}}});
 }
-
+ 
 function renderResumen(ingresos) {
   const deuda=tarjetas.reduce((s,t)=>s+t.saldo,0);
   const gasto=gastos.reduce((s,g)=>s+g.monto,0);
@@ -1402,7 +1402,7 @@ function renderResumen(ingresos) {
     </div>
   `;
 }
-
+ 
 // ═══════════════════════════════════
 // HISTORIAL
 // ═══════════════════════════════════
@@ -1410,7 +1410,7 @@ function renderHistorial() {
   const view=document.getElementById('hist-view').value;
   const filtro=document.getElementById('filtro-mes').value;
   const content=document.getElementById('hist-content');
-
+ 
   if(view==='pacientes') {
     let data=[...pacientes].sort((a,b)=>a.fecha<b.fecha?1:-1);
     if(filtro) data=data.filter(x=>x.fecha.startsWith(filtro));
@@ -1442,7 +1442,7 @@ function renderHistorial() {
     </table></div>`;
   }
 }
-
+ 
 function exportarCSV() {
   const view=document.getElementById('hist-view').value;
   let csv,filename;
@@ -1457,7 +1457,7 @@ function exportarCSV() {
   a.href='data:text/csv;charset=utf-8,'+encodeURIComponent(csv);
   a.download=filename; a.click();
 }
-
+ 
 // ═══════════════════════════════════
 // DEUDAS
 // ═══════════════════════════════════
@@ -1484,7 +1484,7 @@ function renderDeudas() {
   if(!ps.length){pt.innerHTML='';pe.style.display='block';}
   else{pe.style.display='none';pt.innerHTML=ps.map(p=>`<tr><td>${p.fecha}</td><td class="bold">${p.tarjeta}</td><td class="mono">${fmt(p.monto)}</td><td><span class="badge ${p.tipo==='total'?'badge-cash':p.tipo==='extra'?'badge-card':'badge-ath'}">${p.tipo}</span></td><td style="color:var(--text-muted)">${p.nota||'—'}</td></tr>`).join('');}
 }
-
+ 
 async function guardarTarjeta() {
   const nombre=document.getElementById('t-nombre').value.trim();
   const saldo=+document.getElementById('t-saldo').value||0;
@@ -1498,7 +1498,7 @@ async function guardarTarjeta() {
   hideLoading();closeModal('modal-tarjeta');renderDeudas();showToast('Tarjeta guardada ✓');
   ['t-nombre','t-saldo','t-limite','t-apr','t-min'].forEach(id=>document.getElementById(id).value='');
 }
-
+ 
 async function eliminarTarjeta(i) {
   if(!confirm('¿Eliminar esta tarjeta?')) return;
   tarjetas.splice(i,1);
@@ -1506,14 +1506,14 @@ async function eliminarTarjeta(i) {
   await rewriteSheet(SHEETS.tarjetas,['nombre','saldo','limite','apr','minimo'],tarjetas.map(t=>[t.nombre,t.saldo,t.limite,t.apr,t.minimo]));
   hideLoading();renderDeudas();showToast('Eliminada');
 }
-
+ 
 function openModalPago() {
   const sel=document.getElementById('p-tarjeta');
   sel.innerHTML=!tarjetas.length?'<option>Agrega una tarjeta primero</option>':tarjetas.map(t=>`<option>${t.nombre}</option>`).join('');
   document.getElementById('pp-fecha').value=today();
   openModal('modal-pago');
 }
-
+ 
 async function guardarPago() {
   const tarj=document.getElementById('p-tarjeta').value;
   const fecha=document.getElementById('pp-fecha').value;
@@ -1529,7 +1529,7 @@ async function guardarPago() {
   hideLoading();closeModal('modal-pago');renderDeudas();showToast('Pago registrado ✓');
   document.getElementById('pp-monto').value='';document.getElementById('pp-nota').value='';
 }
-
+ 
 // ═══════════════════════════════════
 // GASTOS
 // ═══════════════════════════════════
@@ -1550,7 +1550,7 @@ function renderGastos() {
   destroyChart('chartGastos');
   if(Object.keys(cats).length){const colors=['#2A7B8C','#3DBDA0','#1a7a42','#b7770d','#c0392b','#8e44ad','#2980b9','#e67e22'];chartInst['chartGastos']=new Chart(document.getElementById('chartGastos'),{type:'doughnut',data:{labels:Object.keys(cats),datasets:[{data:Object.values(cats),backgroundColor:colors.slice(0,Object.keys(cats).length),borderWidth:0,hoverOffset:5}]},options:{responsive:true,maintainAspectRatio:false,cutout:'55%',plugins:{legend:{position:'bottom',labels:{font:{size:11},boxWidth:10,padding:8}}}}});}
 }
-
+ 
 async function guardarGasto() {
   const fecha=document.getElementById('g-fecha').value;
   const monto=+document.getElementById('g-monto').value||0;
@@ -1563,14 +1563,14 @@ async function guardarGasto() {
   hideLoading();closeModal('modal-gasto');renderGastos();showToast('Gasto guardado ✓');
   document.getElementById('g-monto').value='';document.getElementById('g-desc').value='';
 }
-
+ 
 async function eliminarGasto(i) {
   if(!confirm('¿Eliminar?')) return;
   gastos.splice(i,1);showLoading('Actualizando...');
   await rewriteSheet(SHEETS.gastos,['fecha','monto','descripcion','categoria'],gastos.map(g=>[g.fecha,g.monto,g.descripcion,g.categoria]));
   hideLoading();renderGastos();showToast('Eliminado');
 }
-
+ 
 // ═══════════════════════════════════
 // ANÁLISIS
 // ═══════════════════════════════════
@@ -1585,11 +1585,11 @@ function renderAnalisis() {
   const mes=new Date().toISOString().slice(0,7);
   const ingM=pacientes.filter(x=>x.fecha.startsWith(mes)).reduce((s,x)=>s+x.total,0);
   const meses=deud>0&&ingM>0?Math.ceil(deud/(ingM*0.2)):0;
-
+ 
   // Top service
   const counts={};pacientes.forEach(p=>p.servicios.forEach(s=>{if(s)counts[s]=(counts[s]||0)+1;}));
   const top=Object.entries(counts).sort((a,b)=>b[1]-a[1])[0];
-
+ 
   document.getElementById('analisis-kpis').innerHTML=`
     <div class="metric-card"><div class="metric-label">Pacientes totales</div><div class="metric-value teal">${allP}</div></div>
     <div class="metric-card"><div class="metric-label">Ticket promedio</div><div class="metric-value teal">${fmt(avg)}</div></div>
@@ -1597,7 +1597,7 @@ function renderAnalisis() {
     <div class="metric-card"><div class="metric-label">Equilibrio</div><div class="metric-value warning">${fmt(gTot+mins)}</div><div class="metric-sub">Gastos + mínimos</div></div>
     ${top?`<div class="metric-card"><div class="metric-label">Servicio top</div><div class="metric-value" style="font-size:13px;line-height:1.3">${top[0].split('—')[0].split('(')[0].trim()}</div><div class="metric-sub">${top[1]} veces</div></div>`:''}
   `;
-
+ 
   const cards=[
     {color:'#2A7B8C',title:'Aumentar ticket por visita',items:['Implementar paquetes (3, 5 o 10 sesiones) con precio especial — garantiza retorno y aumenta el ingreso inmediato.',avg>0?`Ticket actual: ${fmt(avg)}. Meta 90 días: ${fmt(avg*1.4)} (+40%).`:'Registra pacientes para calcular tu ticket real.',top?`Tu servicio más solicitado es "${top[0].split('(')[0].trim()}" — considera crear un paquete específico de ese servicio.`:'Registra servicios para identificar los más populares.','Ofrecer productos Color Science al finalizar cada tratamiento facial. Meta: +$30–50 por visita.']},
     {color:'#1a7a42',title:'Multiplicar ventas por paciente',items:['Cada paciente que entra es una oportunidad — ofrecer al menos 1 servicio complementario.',"Antes de que salga, agendar la próxima cita. Meta: 80% de re-agendamiento.",'Programa de referidos: descuento a quien traiga una nueva paciente que pague.','Reactivar pacientes inactivos con campaña de WhatsApp con oferta exclusiva.']},
@@ -1605,19 +1605,20 @@ function renderAnalisis() {
     {color:'#c0392b',title:'Plan de liquidación de deuda',items:[`Deuda total: ${fmt(deud)}. Estrategia avalancha: mínimo en todas, extra a la de mayor APR primero.`,meses>0?`Destinando 20% de ingresos mensuales a deuda extra, estimamos liquidar en ~${meses} meses.`:'Ingresa tarjetas para calcular tu proyección.','Evitar cargos nuevos hasta reducir uso por debajo del 50% del límite.','Cada ingreso extraordinario: 50% directo a la tarjeta de mayor APR.']},
     {color:'#8e44ad',title:'Marketing de alto impacto',items:['Resultados antes/después reales con permiso del paciente — generan más conversiones que anuncios pagados.','Instagram y TikTok: 3 posts semanales + stories diarios del trabajo real.','Google Business Profile actualizado con fotos, servicios y precios — captura búsquedas locales gratis.','Colaboraciones locales (como Ingrid\'s Sweet Creations): busca 2–3 alianzas más en 60 días.']}
   ];
-
+ 
   document.getElementById('analysis-grid').innerHTML=cards.map(c=>`<div class="analysis-card"><div class="analysis-title"><span class="analysis-dot" style="background:${c.color}"></span>${c.title}</div>${c.items.map((item,i)=>`<div class="analysis-item"><div class="analysis-num" style="background:${c.color}18;color:${c.color}">${i+1}</div><div>${item}</div></div>`).join('')}</div>`).join('');
   document.getElementById('plan-accion').innerHTML=`<strong>Semana 1:</strong> Registra cada paciente. Identifica tu ticket promedio real. Habla con los 10 pacientes más frecuentes y ofréceles un paquete.<br><strong>Semana 2:</strong> Agrega tarjetas y gastos. Activa la estrategia avalancha. Haz el cuadre diario sin falta.<br><strong>Semana 3:</strong> Lanza paquetes de servicios. Publica resultados reales en redes. Reactiva pacientes inactivos.<br><strong>Mes 2:</strong> Mide si el ticket subió. Meta: ingresos mes 2 > mes 1 en 20%.<br><strong>Trimestre:</strong> Revisar si el ratio deuda/ingreso bajó. Ajustar y celebrar metas cumplidas.`;
 }
-
+ 
 // ═══════════════════════════════════
 // MODALS
 // ═══════════════════════════════════
 function openModal(id){document.getElementById(id).classList.add('open');}
 function closeModal(id){document.getElementById(id).classList.remove('open');}
 document.querySelectorAll('.modal-overlay').forEach(m=>{m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('open');});});
-
+ 
 updateDate();
 </script>
 </body>
 </html>
+ 
